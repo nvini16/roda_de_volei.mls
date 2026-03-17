@@ -252,11 +252,11 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
 
 <script>
   const aviso = document.getElementById("avisoRoda");
-  const rodaAtiva = true;
+  const rodaAtiva = false;
 
   aviso.innerHTML = rodaAtiva
-    ? "<strong>Status:</strong> Hoje tem roda de vôlei."
-    : "<strong>Status:</strong> Sem roda hoje.";
+    ? "<strong>Status:</strong> Está tendo roda hoje.."
+    : "<strong>Status:</strong> Acabou a roda.";
 
   const wrapper = document.querySelector(".galeria-wrapper");
   const next = document.getElementById("next");
