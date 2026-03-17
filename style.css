@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background: #0f0f0f;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, #ff7a00, #ffb347);
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-left: 4px solid #ff7a00;
+    padding-left: 10px;
+  }
+
+  .aviso {
+    background: #1c1c1c;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .aviso strong {
+    color: #ffb347;
+  }
+
+  /* Galeria */
+  .galeria-wrapper {
+    overflow-x: auto;
+    margin: 0 -20px;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .galeria-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galeria {
+    display: flex;
+    gap: 12px;
+  }
+
+  .galeria-item {
+    flex: 0 0 140px;
+    height: 140px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .galeria-item:hover {
+    transform: scale(1.05);
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .scroll-indicator {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 5px;
+  }
+
+  .nav-buttons {
+    position: relative;
+    top: -150px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .nav-buttons button {
+    pointer-events: all;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .caption {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .cta {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .cta button {
+    background: #ff7a00;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+    border-top: 1px solid #222;
+  }
+
+  .background {
+    background-color: #ffb347;
+    color: #000000;
+  }
+
+  .divdiv {
+    padding: 40px;
+  }
+
+  .barra-laranja {
+    margin-bottom: 15px;
+    border-left: 4px solid #ff7a00;
+    padding-left: 10px;
+  }
+
+  .h2h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-left: 4px solid #ff7a00;
+    padding-left: 10px;
+    background: linear-gradient( 135deg, #ff7b005b, #ffb347);
+    border-radius: 5px;
+  }
+
+  .barre {
+    background: linear-gradient(135deg,  #ff7a00, #ffb347);
+    color: #ff7b0000;
+  }
