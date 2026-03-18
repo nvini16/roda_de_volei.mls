@@ -196,3 +196,7 @@
     background: linear-gradient(135deg,  #ff7a00, #ffb347);
     color: #ff7b0000;
   }
+
+.logo-border {
+    border: 4px solid #FF8C00;
+}
