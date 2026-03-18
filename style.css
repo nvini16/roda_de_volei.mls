@@ -200,3 +200,17 @@
 .logo-border {
     border: 4px solid #FF8C00;
 }
+
+
+.card {
+Transition: 0.5s ease;
+cursor: pointer;;
+}
+
+.container:houver > :nota(:houver){
+opacity: 0.3;
+}
+
+.card:hover {
+transform: escale(1.1);
+}
