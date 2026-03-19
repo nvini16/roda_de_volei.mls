@@ -216,8 +216,8 @@ transform: escale(1.1);
 }
 
 .img-game {
- width: 350px;
- height: 450px;
+ width: 150px;
+ height: 250px;
  trasition: 0.5s ease;
  cursor: pointer;
  border-radius: 50px;
