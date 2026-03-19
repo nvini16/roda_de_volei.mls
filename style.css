@@ -207,10 +207,24 @@ Transition: 0.5s ease;
 cursor: pointer;;
 }
 
-.container:houver > :nota(:houver){
+.container:houver > :not(:houver){
 opacity: 0.3;
 }
 
 .card:hover {
 transform: escale(1.1);
 }
+
+.img-game {
+ width: 300px;
+ height: 400px;
+ trasition: 0.5s ease;
+ cursor: pointer;;
+}
+
+.img-game:hover {
+transform: escale(1.1);
+}
+
+.div-game:houver > :not(:hover){
+opacity: 0.3;
