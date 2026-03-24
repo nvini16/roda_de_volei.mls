@@ -230,3 +230,28 @@ transform: escale(1.1);
 
 .div-game:houver > :not(:hover){
 opacity: 0.3;
+}
+
+
+/* Scrul de parágrafo */
+
+.p {
+  width: 371px;
+  height: 150px;
+  overflow: auto;
+}
+
+.p::-webkit-scrollbar {
+  width: 12px;               
+}
+
+.p::-webkit-scrollbar-track {
+  background: orange;  
+  border-radius: 20px;     
+}
+
+.p::-webkit-scrollbar-thumb {
+  background-color: #D75413;    
+  border-radius: 20px;       
+  border: 3px solid #FF9C2A;  
+}
