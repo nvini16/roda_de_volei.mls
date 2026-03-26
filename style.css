@@ -25,7 +25,7 @@ header img {
   margin-bottom: 15px;
 }
 
-section {
+.section {
   padding: 30px 20px;
   max-width: 900px;
   margin: auto;
@@ -236,8 +236,8 @@ opacity: 0.3;
 /* Scrul de parágrafo */
 
 .html { 
-  width: 305px;
-  height: 205px;
+  width: 815px;
+  height: 305px;
   overflow: auto;
 }
 
@@ -311,3 +311,18 @@ a {
 a:hover {
   color: #d75413;
 }
+
+  /* imagem de fundo do header*/
+  .bg-box {
+    width: 100%;
+    height: 300px;
+  
+    background: 
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("img-patvctm-volei.png");
+  
+    background-size: cover;
+    background-position: center;
+    }
+  
+    
