@@ -32,7 +32,7 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
   <section class="section">
     <h2>Galeria</h2> <div class="scroll-indicator">→ Arraste</div>
 
-    <div class="html">
+    <div class="">
   
     
       <p>04.02.2026.Quart</p>
@@ -104,22 +104,29 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
   </section>
 
   <div class="bg-box">
+    <p class="barre">Texto invisivel</p>
+
     <section class="cta">
       <h2>Participar</h2>
       <button id="comoFunciona">Como funciona</button>
       <button id="instagram">Instagram</button>
     </section>
   </div>
+  <p class="barre">Texto invisivel</p>
 
 <!--Catalogo de jogos-->
 <h2 class="cta">Jogos passa tempo</h2>
 <section class="box">
 
-  <div class="card">
-    <img src="FCB58946-9237-4B59-863A-63EEFF79FDDE.jpeg">
-    <h3>Jogo da memória interativo</h3>
-    <a href="https://nvini16.github.io/Cat-logo-de-jogos-/">Jogo</a>
+
+  <div class="jogo-back">
+    <div class="card">
+      <img src="img-back-memori-jogo.png">
+      <h3>Jogo da memória interativo</h3>
+      <a href="https://nvini16.github.io/Cat-logo-de-jogos-/">Jogo</a>
+    </div>
   </div>
+
 
 </section>
 
@@ -162,7 +169,7 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
 
 <script>
   const aviso = document.getElementById("avisoRoda");
-  const rodaAtiva = false;
+  const rodaAtiva = true;
 
   aviso.innerHTML = rodaAtiva
     ? "<strong>Status:</strong> Está tendo roda hoje.."
