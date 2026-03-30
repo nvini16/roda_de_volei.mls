@@ -175,50 +175,89 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
 <footer>
   Tradição da roda de vôlei • Marlene Leite da Silva 2026
 </footer>
+  <script>
 
-<script>
-  const aviso = document.getElementById("avisoRoda");
-  const rodaAtiva = false;
+// STATUS DA RODA
+const aviso = document.getElementById("avisoRoda");
+
+if (aviso) {
+  const agora = new Date();
+  const dia = agora.getDay(); // 0 = domingo
+  const hora = agora.getHours();
+
+  const rodaAtiva = (dia >= 1 && dia <= 5) && (hora >= 17 && hora <= 19);
 
   aviso.innerHTML = rodaAtiva
-    ? "<strong>Status:</strong> Está tendo roda hoje.."
-    : "<strong>Status:</strong> Acabou a roda..";
+    ? "<strong>Status:</strong> Está tendo roda hoje."
+    : "<strong>Status:</strong> Acabou a roda.";
+}
 
-  const wrapper = document.querySelector(".galeria-wrapper");
-  const next = document.getElementById("next");
-  const prev = document.getElementById("prev");
+// SCROLL DAS GALERIAS (independente)
+document.querySelectorAll(".galeria-bloco").forEach(bloco => {
+  const wrapper = bloco.querySelector(".galeria-wrapper");
+  const next = bloco.querySelector(".next");
+  const prev = bloco.querySelector(".prev");
 
-  next.onclick = () => wrapper.scrollBy({ left: 150, behavior: "smooth" });
-  prev.onclick = () => wrapper.scrollBy({ left: -150, behavior: "smooth" });
+  if (next && wrapper) {
+    next.onclick = () => {
+      wrapper.scrollBy({ left: 150, behavior: "smooth" });
+    };
+  }
 
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const caption = document.getElementById("caption");
+  if (prev && wrapper) {
+    prev.onclick = () => {
+      wrapper.scrollBy({ left: -150, behavior: "smooth" });
+    };
+  }
+});
 
-  document.querySelectorAll(".galeria-item img").forEach(img => {
-    img.onclick = () => {
+// LIGHTBOX
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const caption = document.getElementById("caption");
+
+document.querySelectorAll(".galeria-item img").forEach(img => {
+  img.onclick = () => {
+    if (lightbox && lightboxImg) {
       lightbox.style.display = "flex";
       lightboxImg.src = img.src;
       caption.textContent = img.alt || "";
-    };
-  });
+    }
+  };
+});
 
-  document.querySelector(".lightbox .close").onclick = () => {
+const closeBtn = document.querySelector(".lightbox .close");
+
+if (closeBtn && lightbox) {
+  closeBtn.onclick = () => {
     lightbox.style.display = "none";
   };
+}
 
+if (lightbox) {
   lightbox.onclick = e => {
-    if (e.target === lightbox) lightbox.style.display = "none";
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
   };
+}
 
-  document.getElementById("comoFunciona").onclick = () => {
+// BOTÕES
+const btnComo = document.getElementById("comoFunciona");
+const btnInsta = document.getElementById("instagram");
+
+if (btnComo) {
+  btnComo.onclick = () => {
     alert("A roda é livre.\n\nNão precisa de experiência.\nChegou, entrou, jogou.");
   };
+}
 
-  document.getElementById("instagram").onclick = () => {
+if (btnInsta) {
+  btnInsta.onclick = () => {
     window.open("https://www.instagram.com/roda_de_volei.mls/", "_blank");
   };
-</script>
+}
+  </script>
 
 </body>
 </html>
